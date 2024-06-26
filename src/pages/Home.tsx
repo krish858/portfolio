@@ -1,13 +1,18 @@
 import Navbar from "../Components/Navbar"
+import { useNavigate } from "react-router-dom";
 import Card from "../Components/Card";
 import StackTemplate from "../Components/StackTemplate";
+import { backendarr } from "../Assets/Arrays";
+import { languagesarr } from "../Assets/Arrays";
+import { frontendarr } from "../Assets/Arrays";
+import { Deploymentarr } from "../Assets/Arrays";
 
 function Home() {
     const year = new Date().getFullYear()
     const y = year - 2023;
-    const backendarr:Array<object> = [{image: "hello",name: "bye"},{image: "hello1",name: "bye2"}]
+    const navigate = useNavigate()
   return (
-    <div className="w-screen  flex flex-col bg-[#000000]">
+    <div className="w-screen flex flex-col bg-[#000000]">
         <Navbar/>
         <div className="flex w-screen flex-col-reverse md:flex-row md:pt-10">
             <div className="flex justify-center items-center md:justify-start md:items-start flex-col px-4 md:px-8 md:w-1/2">
@@ -18,11 +23,11 @@ function Home() {
                 <h1 className="text-xl text-center md:text-left text-slate-500 font-Raleway font-light">Over the past <span className="text-white">{y} year</span>, I've transitioned into a <span className="text-white">Fullstack Developer</span>, driving innovation by collaborating closely with diverse teams to define and implement new features and spearhead the development of cutting-edge applications.</h1>
                 <div className="flex flex-col md:flex-row py-10 md:py-4">
                     <div className="bg-white rounded-full px-6 py-2 cursor-pointer">Download CV</div>
-                    <div className="text-purple-300 mx-6 my-2 cursor-pointer">see experience</div>
+                    <div className="text-purple-300 mx-6 my-2 cursor-pointer" onClick={()=>{navigate('/portfolio/experience')}}>see experience</div>
                 </div>
             </div>
             <div className=" flex justify-center items-center text-white md:w-1/2">
-                yahan img aani he
+                {/* yahan img aani he */}
             </div>
         </div>
         <div className="flex flex-col items-center md:flex-row md:mx-6 my-44">
@@ -50,8 +55,14 @@ function Home() {
             <h1>The technologies I've</h1>
             <h1>been using</h1>
         </div>
-        <div className="text-white p-4 font-Raleway flex flex-row overflow-x-auto whitespace-nowrap">
-            <StackTemplate Title="Backend" Data={backendarr}/>
+        <div className="text-white p-4 font-Raleway flex flex-row overflow-x-auto whitespace-nowrap xl:justify-center">
+            <div className="px-8 flex"><StackTemplate Title="Backend" Data={backendarr}/></div>
+            <div className="px-8 flex"><StackTemplate Title="Languages" Data={languagesarr}/></div>
+            <div className="px-8 flex"><StackTemplate Title="Frontend" Data={frontendarr}/></div>
+            <div className="px-8 flex"><StackTemplate Title="Devops" Data={Deploymentarr}/></div>
+        </div>
+        <div>
+            hello
         </div>
     </div>
   )
