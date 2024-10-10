@@ -1,4 +1,3 @@
-
 interface card{
     image: string,
     Title: string,

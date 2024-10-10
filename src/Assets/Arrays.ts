@@ -96,3 +96,5 @@ export const Deploymentarr: Array<data> = [
     name: "Vercel",
   },
 ];
+
+export const Projects = [];
