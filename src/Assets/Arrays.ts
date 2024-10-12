@@ -1,4 +1,5 @@
 import { data } from "../Components/StackTemplate";
+import { projectdatatype } from "../pages/Projects";
 
 export const backendarr: Array<data> = [
   {
@@ -97,4 +98,20 @@ export const Deploymentarr: Array<data> = [
   },
 ];
 
-export const Projects = [];
+export const projectdata: Array<projectdatatype> = [
+  {
+    title: "Hlm4",
+    description: "hls to mp4 convertor",
+    link: "https://github.com/krish858/Hls-M3U8-to-MP4",
+  },
+  {
+    title: "Medium clone",
+    description: "A simple blog site",
+    link: "https://github.com/krish858/react-blogs-app",
+  },
+  {
+    title: "linkshortner",
+    description: "tool to shortern url",
+    link: "https://github.com/krish858/MiniProjects/tree/main/Link_Shortner",
+  },
+];

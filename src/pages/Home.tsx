@@ -21,7 +21,7 @@ function Home() {
   return (
     <div className="w-screen flex flex-col bg-[#000000]">
       <Navbar />
-      <div className="flex w-screen flex-col-reverse md:flex-row md:pt-10">
+      <div className="flex w-screen flex-col-reverse md:flex-row mt-16 md:mt-10">
         <div className="flex justify-center items-center md:justify-start md:items-start flex-col px-4 md:px-8 md:w-1/2">
           <h1 className=" text-3xl md:text-5xl font-Raleway font-medium text-white">
             Hi, I'm Krish
@@ -30,14 +30,16 @@ function Home() {
 
           <h1 className="text-xl text-center md:text-left text-slate-500 font-Raleway font-light">
             Over the past{" "}
-            <span className="text-white text-xl">
+            <span className="text-white text-xl font-semibold">
               {y}.{m} year
             </span>
             , I've transitioned into a{" "}
-            <span className="text-white">Fullstack Developer</span>, driving
-            innovation by collaborating closely with diverse teams to define and
-            implement new features and spearhead the development of cutting-edge
-            applications.
+            <span className="text-white font-semibold">
+              Fullstack Developer
+            </span>
+            , driving innovation by collaborating closely with diverse teams to
+            define and implement new features and spearhead the development of
+            cutting-edge applications.
           </h1>
           <div className="flex flex-col md:flex-row py-10 md:py-4">
             <div
@@ -64,7 +66,7 @@ function Home() {
         <div className="flex flex-col justify-center items-center md:justify-start md:items-start font-Raleway">
           <div>
             <h1 className="text-gray-400 font-medium text-center md:text-left">
-              {y} years of
+              {y}.{m} years of
             </h1>
             <h1 className="text-white font-bold text-8xl text-center md:text-left">
               XP
@@ -103,7 +105,7 @@ function Home() {
         <h1 className="text-[#6104D6] pb-24">Coffee</h1>
       </div>
       <div className="text-white text-center text-4xl font-Raleway md:text-5xl py-8">
-        <h1>The technologies I've</h1>
+        <h1>The Technologies I've</h1>
         <h1>been using</h1>
       </div>
       <div className="text-white p-4 font-Raleway flex flex-row overflow-x-auto whitespace-nowrap xl:justify-center">
@@ -120,7 +122,16 @@ function Home() {
           <StackTemplate Title="Devops" Data={Deploymentarr} />
         </div>
       </div>
-      <div>hello</div>
+      <div className="w-full flex justify-center items-center ">
+        <button
+          className="bg-[#9F53FF] text-white rounded-full px-6 py-2 cursor-pointer mt-16 mb-12"
+          onClick={() => {
+            navigate("/portfolio/projects");
+          }}
+        >
+          View Projects
+        </button>
+      </div>
     </div>
   );
 }
